@@ -37,8 +37,8 @@ namespace SpriteSheetBuilder
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.label1 = new System.Windows.Forms.Label();
             this.spritesPerRowTextBox = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.startButton = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -62,6 +62,7 @@ namespace SpriteSheetBuilder
             this.addInputButton.TabIndex = 3;
             this.addInputButton.Text = "Add...";
             this.addInputButton.UseVisualStyleBackColor = true;
+            this.addInputButton.Click += new System.EventHandler(this.addInputButton_Click);
             // 
             // deleteInputButton
             // 
@@ -71,6 +72,7 @@ namespace SpriteSheetBuilder
             this.deleteInputButton.TabIndex = 4;
             this.deleteInputButton.Text = "Delete selected";
             this.deleteInputButton.UseVisualStyleBackColor = true;
+            this.deleteInputButton.Click += new System.EventHandler(this.deleteInputButton_Click);
             // 
             // outputImageTextBox
             // 
@@ -87,6 +89,7 @@ namespace SpriteSheetBuilder
             this.browseOutputButton.TabIndex = 6;
             this.browseOutputButton.Text = "Browse...";
             this.browseOutputButton.UseVisualStyleBackColor = true;
+            this.browseOutputButton.Click += new System.EventHandler(this.browseOutputButton_Click);
             // 
             // groupBox1
             // 
@@ -122,6 +125,14 @@ namespace SpriteSheetBuilder
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Options";
             // 
+            // spritesPerRowTextBox
+            // 
+            this.spritesPerRowTextBox.Location = new System.Drawing.Point(126, 44);
+            this.spritesPerRowTextBox.Name = "spritesPerRowTextBox";
+            this.spritesPerRowTextBox.Size = new System.Drawing.Size(125, 27);
+            this.spritesPerRowTextBox.TabIndex = 1;
+            this.spritesPerRowTextBox.Text = "8";
+            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -131,14 +142,6 @@ namespace SpriteSheetBuilder
             this.label1.TabIndex = 0;
             this.label1.Text = "Sprites per row";
             // 
-            // spritesPerRowTextBox
-            // 
-            this.spritesPerRowTextBox.Location = new System.Drawing.Point(126, 44);
-            this.spritesPerRowTextBox.Name = "spritesPerRowTextBox";
-            this.spritesPerRowTextBox.Size = new System.Drawing.Size(125, 27);
-            this.spritesPerRowTextBox.TabIndex = 1;
-            this.spritesPerRowTextBox.Text = "8";
-            // 
             // startButton
             // 
             this.startButton.Location = new System.Drawing.Point(286, 461);
@@ -147,6 +150,7 @@ namespace SpriteSheetBuilder
             this.startButton.TabIndex = 10;
             this.startButton.Text = "Start";
             this.startButton.UseVisualStyleBackColor = true;
+            this.startButton.Click += new System.EventHandler(this.startButton_Click);
             // 
             // Form1
             // 
